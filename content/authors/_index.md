@@ -16,7 +16,7 @@ education:
       year: 2026
     - course: BS Bioengineering — Data Science
       institution: University of Washington
-      year: 2024
+      year: 2025
 
 social:
   - icon: envelope
