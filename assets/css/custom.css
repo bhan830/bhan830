@@ -34,14 +34,11 @@
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 0 !important;
 }
 
 .grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 br {
-  display: none !important;
-}
-
-.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 br::after {
   content: ' – ' !important;
+  display: inline !important;
   white-space: pre !important;
+  width: auto !important;
 }
