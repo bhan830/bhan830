@@ -36,7 +36,7 @@ education:
     start: 2024-09-01
     end: 2026-06-30
     summary: GPA 3.96 · Annual Dean's List
-  - degree: BS Bioengineering — Data Science
+  - degree: "Bachelor of Science - Bioengineering: Data Science"
     institution: University of Washington
     start: 2020-09-01
     end: 2025-06-30
@@ -46,7 +46,11 @@ experience:
     org: Bio-Therapeutic
     start: 2024-09-01
     summary: |
-      Developed Tableau dashboards for inventory tracking and automated customer service workflows.
+      -   Increased operational visibility across 1000+ purchasing orders and supply records by developing three interactive Tableau dashboards for inventory and procurement tracking
+      -   Reduced manual data entry effort and improved workflow by automating customer service logging workbooks
+      -   Supported quality management reporting by collecting and analyzing statistical client data for internal review
+      -   Conducted surveillance audits to ensure compliance with the Bio-Therapeutic Quality Management System
+
   - role: Lead Teaching Assistant
     org: UW Bioengineering Department
     start: 2024-01-01
