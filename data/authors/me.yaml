@@ -34,10 +34,12 @@ education:
   - degree: Master of Applied Bioengineering (MAB)
     institution: University of Washington
     start: September 2025 - June 2026
+    end: ''
     summary: GPA 3.94 · Annual Dean's List
   - degree: "Bachelor of Science - <br> Bioengineering: Data Science"
     institution: University of Washington
     start: September 2021 - June 2025
+    end: ''
     summary: GPA 3.47 · Minor in Applied Mathematics
 experience:
   - role: Quality Assurance Intern
