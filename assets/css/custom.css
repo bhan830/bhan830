@@ -42,3 +42,8 @@
   white-space: pre !important;
   width: auto !important;
 }
+
+/* Hide the end date line on homepage education cards */
+.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 ~ p.text-sm {
+  display: none !important;
+}
