@@ -1,6 +1,7 @@
 ---
 title: WiseSpine
 summary: AI agent for automated Cobb angle measurement from spine X-rays using deep learning segmentation.
+featured_image: ''
 tags:
   - Python
   - PyTorch

@@ -13,9 +13,9 @@ sections:
         folders:
           - projects
     design:
-      view: card
+      view: article-grid
       fill_image: false
-      columns: 2
+      columns: 3
       show_date: false
       show_read_time: false
       show_read_more: false

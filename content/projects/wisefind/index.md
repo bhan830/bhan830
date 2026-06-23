@@ -1,6 +1,7 @@
 ---
 title: WiseFind
 summary: RAG-based AI platform for neurotrauma clinical queries, securing $55K in funding from ITHS and UW Neurosurgery.
+featured_image: ''
 tags:
   - Python
   - RAG

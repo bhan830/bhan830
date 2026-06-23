@@ -1,6 +1,7 @@
 ---
 title: CareChorus
 summary: AI-driven mobile app for patient care navigation and medical document classification.
+featured_image: ''
 tags:
   - Dart
   - LLMs
