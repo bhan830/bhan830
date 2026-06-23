@@ -16,9 +16,17 @@
 
 .grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm {
   display: flex;
-  gap: 8px;
+  gap: 4px;
+  align-items: center;
 }
 
 .grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm br {
-  display: none;
+  content: '';
+  display: inline;
+  margin: 0 4px;
+}
+
+.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm br::after {
+  content: '–';
+  color: #9ca3af;
 }
