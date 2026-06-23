@@ -37,5 +37,4 @@ social:
     icon_pack: fab
     link: https://github.com/bhan830
 
-superuser: true
 ---
