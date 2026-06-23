@@ -24,3 +24,8 @@
 .grid.md\:grid-cols-2.xl\:grid-cols-3 .flex-1 > p:not(.text-xl) {
   margin-top: auto !important;
 }
+
+.grid.md\:grid-cols-2.xl\:grid-cols-3 .group {
+  min-height: 250px !important;
+  padding: 2rem !important;
+}
