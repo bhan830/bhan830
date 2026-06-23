@@ -7,6 +7,8 @@
   height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
+  min-height: 220px !important;
+  padding: 2rem !important;
 }
 
 .grid.md\:grid-cols-2.xl\:grid-cols-3 .group > .flex.gap-4 {
@@ -25,29 +27,12 @@
   margin-top: auto !important;
 }
 
-.grid.md\:grid-cols-2.xl\:grid-cols-3 .group {
-  min-height: 250px !important;
-  padding: 2rem !important;
+.group:nth-child(2) p.text-xl {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
 }
 
-.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-}
-
-.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 br {
-  content: ' – ' !important;
-  display: inline !important;
-  white-space: pre !important;
-  width: auto !important;
-}
-
-/* Hide the end date line on homepage education cards */
-.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 ~ p.text-sm {
-  display: none !important;
-}
-
+/* Dates on one line with dash */
 .grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 {
   display: flex !important;
   flex-direction: row !important;
@@ -56,5 +41,20 @@
 }
 
 .grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 br {
+  display: inline-block !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
+
+.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 br::after {
+  content: ' – ' !important;
+  display: inline-block !important;
+  white-space: pre !important;
+  overflow: visible !important;
+  width: auto !important;
+}
+
+/* Hide duplicate end date */
+.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 ~ p.text-sm {
   display: none !important;
 }
