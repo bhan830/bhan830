@@ -1,23 +1,24 @@
 .grid.md\:grid-cols-2.xl\:grid-cols-3 {
   grid-template-columns: 1fr 1fr !important;
+  align-items: stretch !important;
 }
 
-@media (min-width: 768px) {
-  .grid.md\:grid-cols-2.xl\:grid-cols-3 {
-    grid-template-columns: 1fr 1fr !important;
-  }
+.grid.md\:grid-cols-2.xl\:grid-cols-3 .group {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-@media (min-width: 1280px) {
-  .grid.md\:grid-cols-2.xl\:grid-cols-3 {
-    grid-template-columns: 1fr 1fr !important;
-  }
+.grid.md\:grid-cols-2.xl\:grid-cols-3 .group > .flex.gap-4 {
+  flex-direction: column !important;
+  height: 100% !important;
 }
 
 .grid.md\:grid-cols-2.xl\:grid-cols-3 .flex-1 {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
+  flex-grow: 1 !important;
 }
 
 .group:nth-child(2) p.text-xl {
