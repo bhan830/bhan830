@@ -13,3 +13,12 @@
     grid-template-columns: 1fr 1fr !important;
   }
 }
+
+.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm {
+  display: flex;
+  gap: 8px;
+}
+
+.grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm br {
+  display: none;
+}
