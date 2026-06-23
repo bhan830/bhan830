@@ -55,7 +55,9 @@ experience:
     org: UW Bioengineering Department
     start: 2024-01-01
     summary: |
-      Developed course materials, led lectures, and mentored eight student engineering teams.
+      -   Strengthened student understanding of MATLAB programming and bioengineering design concepts by working with instructors to develop course materials, revise online modules, and lead undergraduate lectures
+      -   Supported academic success through holding 150+ office hours and mentoring eight student engineering teams
+
 skills:
   - name: Programming
     items:
