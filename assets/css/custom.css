@@ -19,3 +19,8 @@
   flex-direction: column !important;
   justify-content: space-between !important;
 }
+
+.group:nth-child(2) p.text-xl {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+}
