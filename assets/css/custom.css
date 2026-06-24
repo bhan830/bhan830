@@ -50,9 +50,9 @@
   padding-bottom: 25px !important;
 }
 
-/* Skills grid: force 3 columns at md breakpoint instead of waiting for lg */
+/* Skills grid: force 3 columns starting at md breakpoint (lg:grid-cols-3 alone only kicks in at 1024px) */
 @media (min-width: 768px) {
-  .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3.items-start {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
