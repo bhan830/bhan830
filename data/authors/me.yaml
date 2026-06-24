@@ -60,6 +60,10 @@ experience:
       -   Supported academic success through holding 150+ office hours and mentoring eight student engineering teams
 
 skills:
+  - design:
+        view: article-grid
+        fill_image: false
+        columns: 3
   - name: Programming Languages
     items:
       - label: Python
