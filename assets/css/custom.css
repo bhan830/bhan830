@@ -49,3 +49,10 @@
 .page-body {
   padding-bottom: 25px !important;
 }
+
+/* Skills grid: force 3 columns at md breakpoint instead of waiting for lg */
+@media (min-width: 768px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
