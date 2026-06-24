@@ -80,4 +80,15 @@ skills:
         level: 5
       - label: LLM Evaluation
         level: 5
+  - name: Engineering Tools
+    items:
+      - label: Fusion 360
+        level: 5
+      - label: AutoCAD
+        level: 4
+      - label: LabVIEW
+        level: 4
+      - label: COMSOL Multiphysics
+        level: 3
+    
 
