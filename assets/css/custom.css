@@ -45,3 +45,7 @@
 .grid.md\:grid-cols-2.xl\:grid-cols-3 p.text-sm.mt-2 ~ p.text-sm {
   display: none !important;
 }
+
+.page-body {
+  padding-bottom: 200px !important;
+}
