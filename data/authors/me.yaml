@@ -92,7 +92,7 @@ skills:
         level: 4
       - label: LLM Evaluation
         level: 5
-  - name: Engineering Tools
+  - name: Engineering Tools / Software
     items:
       - label: Fusion 360
         level: 5
