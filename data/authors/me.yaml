@@ -76,7 +76,7 @@ skills:
         level: 4
       - label: Java
         level: 3
-      - label: Visual Basic for Applications (VBA)
+      - label: Visual Basic for Applications
         level: 3
   - name: AI / Machine Learning
     items:
