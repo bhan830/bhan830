@@ -410,7 +410,8 @@
           {{ end }}
         {{ end }}
 
-        {{/* Education Section */}}
+        {{/* Education Section - commented out to keep homepage to one screen */}}
+        {{/*
         {{ $education_raw := $profile.education }}
         {{ $education := slice }}
         {{ if reflect.IsSlice $education_raw }}
@@ -485,6 +486,7 @@
           </div>
         </div>
         {{ end }}
+        */}}
 
         {{/* Interests Section */}}
         {{ $interests_raw := $profile.interests }}
