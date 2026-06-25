@@ -66,9 +66,20 @@ body {
   background-color: transparent !important;
 }
 
-/* Adjust screen snapping to account for navbar height */
+/* Scroll-snap: sections align to top of viewport, offset by navbar */
+html {
+  scroll-snap-type: y proximity;
+}
+
 section.hbb-section {
-  scroll-margin-top: var(--navbar-height) + 15rem;
+  scroll-snap-align: start;
+  scroll-margin-top: var(--navbar-height, 64px);
+}
+
+/* Colored bar above each section title, inherits from active theme */
+section.hbb-section h2 {
+  border-top: 4px solid var(--color-primary-500);
+  padding-top: 0.75rem;
 }
 
 /* Skills grid: 3 columns at md+, more room and breathing space between columns */
