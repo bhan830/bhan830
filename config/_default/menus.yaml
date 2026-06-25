@@ -17,7 +17,7 @@ main:
 #    url: /#news
 #    weight: 13
   - name: Education
-    url: /#experience
+    url: /#education
     weight: 15
   - name: Experience
     url: /#experience
