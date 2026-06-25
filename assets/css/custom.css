@@ -50,6 +50,10 @@
   padding-bottom: 25px !important;
 }
 
+section.hbb-section {
+  scroll-margin-top: var(--navbar-height);
+}
+
 /* Skills grid: 3 columns at md+, more room and breathing space between columns */
 @media (min-width: 768px) {
   .grid.md\:grid-cols-2.lg\:grid-cols-3.items-start {
