@@ -25,27 +25,33 @@ sections:
         size: medium
         shape: circle
 
-#   - block: markdown
-#     content:
-#       title: 'My Research'
-#       subtitle: ''
-#       text: |-
-#         I am a biomedical engineer specializing in AI-powered systems that integrate
-#         multimodal healthcare data across literature, structured databases, and medical
-#         imaging. My work involves developing and evaluating scalable machine learning
-#         and LLM-based algorithms to transform complex medical data into actionable
-#         information for clinicians.
-#     design:
-#       columns: '1'
+  - block: resume-experience
+    id: experience
+    content:
+      username: me
+    design:
+      date_format: 'January 2006'
+      is_education_first: false
 
-#   - block: collection
-#     id: projects
-#     content:
-#       title: Featured Projects
-#       filters:
-#         folders:
-#           - project
-#     design:
-#       view: card
-#       columns: 2
+  - block: resume-skills
+    content:
+      title: Skills and Qualifications
+      username: me
+    design:
+      columns: 3
+
+  - block: collection
+    id: projects
+    content:
+      title: Selected Projects
+      filters:
+        folders:
+          - projects
+    design:
+      view: article-grid
+      fill_image: false
+      columns: 3
+      show_date: false
+      show_read_time: false
+      show_read_more: false
 ---
