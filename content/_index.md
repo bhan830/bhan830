@@ -25,11 +25,6 @@ sections:
         size: medium
         shape: circle
 
-  - block: resume-education
-    id: education
-    content:
-      username: me
-
   - block: resume-experience
     id: experience
     content:
