@@ -50,8 +50,9 @@
   padding-bottom: 25px !important;
 }
 
+/* Adjust screen snapping to account for navbar height */
 section.hbb-section {
-  scroll-margin-top: var(--navbar-height);
+  scroll-margin-top: var(--navbar-height) + 5rem;
 }
 
 /* Skills grid: 3 columns at md+, more room and breathing space between columns */
