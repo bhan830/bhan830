@@ -71,21 +71,36 @@ html {
   scroll-snap-type: y proximity;
 }
 
+/* scroll-margin-top removed: HugoBlox's hb-nav.js already sets scroll-padding-top
+   on the root element from the real navbar height — adding it here doubles the offset. */
 section.hbb-section {
   scroll-snap-align: start;
-  scroll-margin-top: var(--navbar-height, 64px);
 }
 
-/* Remove top padding so title bar snaps flush to navbar on tab click */
+/* Remove top padding so the title bar sits flush at the section top */
 #experience, #skills, #projects {
   padding-top: 0 !important;
 }
 
 /* Full-width colored title bar, tracks active theme.
-   calc(-50vw + 50%) breaks out of any centered container regardless of max-width. */
-#experience h2,
+   calc(-50vw + 50%) breaks out of any centered container regardless of max-width.
+   align-self: flex-start anchors the item to the container's left edge so the
+   calc lands correctly even when the parent uses items-center. */
+#experience h2 {
+  background-color: var(--color-primary-500);
+  color: white;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
 #skills .mb-6.text-3xl,
 #projects .mb-6.text-3xl {
+  align-self: flex-start;
   background-color: var(--color-primary-500);
   color: white;
   width: 100vw;
