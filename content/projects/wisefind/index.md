@@ -1,6 +1,6 @@
 ---
 title: WiseFind
-summary: Retrieval-Augmented Generation (RAG) platform for neurotrauma clinical intelligence, enabling evidence-grounded question answering from medical literature and patient data. Contributed to retrieval pipelines, LLM evaluation, and platform development, helping secure $55K in funding from ITHS and the UW Department of Neurosurgery.
+summary: Retrieval-Augmented Generation (RAG) platform for neurotrauma clinical intelligence. 
 featured_image: ''
 tags:
   - Python
@@ -12,7 +12,6 @@ tags:
   - Synthetic Data Generation
 date: 2025-09-01
 ---
-
 WiseFind is an AI-powered clinical intelligence platform that integrates Retrieval-Augmented Generation (RAG) with large language models to help clinicians retrieve, analyze, and reason over neurotrauma literature and patient data. By grounding responses in authoritative medical sources, WiseFind supports evidence-based clinical decision-making while improving the efficiency of information retrieval.
 
 ## Key Contributions
