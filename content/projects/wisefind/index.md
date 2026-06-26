@@ -1,22 +1,35 @@
 ---
 title: WiseFind
-summary: RAG-based AI platform for neurotrauma clinical queries, securing $55K in funding from ITHS and UW Neurosurgery.
+summary: Retrieval-Augmented Generation (RAG) platform for neurotrauma clinical intelligence, enabling evidence-grounded question answering from medical literature and patient data. Contributed to retrieval pipelines, LLM evaluation, and platform development, helping secure $55K in funding from ITHS and the UW Department of Neurosurgery.
 featured_image: ''
 tags:
   - Python
-  - RAG
+  - Retrieval-Augmented Generation
+  - Large Language Models
+  - Information Retrieval
   - LLM Evaluation
   - Prompt Engineering
+  - Synthetic Data Generation
 date: 2025-09-01
 ---
 
-WiseFind is a Retrieval-Augmented Generation platform that enables clinicians to query neurotrauma literature in natural language.
+WiseFind is an AI-powered clinical intelligence platform that integrates Retrieval-Augmented Generation (RAG) with large language models to help clinicians retrieve, analyze, and reason over neurotrauma literature and patient data. By grounding responses in authoritative medical sources, WiseFind supports evidence-based clinical decision-making while improving the efficiency of information retrieval.
 
 ## Key Contributions
-- Designed a Python data processing pipeline for handling neurotrauma queries
-- Expanded LLM evaluation from 20 to 400+ clinician-style synthetic queries
-- Secured $55,000 in funding from ITHS and the UW Neurosurgery Department
-- Maintained SOPs and documentation for ongoing platform development
 
-## Tech Stack
-Python · RAG Pipelines · LLM Evaluation · Synthetic Data Generation · Prompt Engineering
+- Developed Python pipelines to preprocess neurotrauma literature and clinician queries for retrieval and evaluation workflows.
+- Expanded the LLM evaluation benchmark from **20** manually written questions to **400+** clinician-style synthetic queries, increasing evaluation coverage and robustness.
+- Designed prompt engineering and synthetic data generation workflows to simulate realistic neurotrauma clinical questions for systematic model evaluation.
+- Collaborated with clinicians and graduate researchers to validate evidence-grounded responses and improve retrieval accuracy for clinical use cases.
+- Authored technical documentation and standard operating procedures (SOPs) to support reproducible development and onboarding of new contributors.
+- Contributed to technical planning and proposal development that helped secure **$55,000** in funding from the Institute of Translational Health Sciences (ITHS) and the University of Washington Department of Neurosurgery.
+
+## Technologies
+
+**Languages:** Python
+
+**AI & Machine Learning:** Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), Prompt Engineering, Synthetic Data Generation
+
+**Data & Evaluation:** Information Retrieval, LLM Evaluation, Data Processing Pipelines
+
+**Development:** Technical Documentation, Standard Operating Procedures (SOPs), Cross-functional Collaboration
