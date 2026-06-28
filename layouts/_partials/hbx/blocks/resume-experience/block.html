@@ -136,8 +136,12 @@
         {{ with index $button_raw "icon" }}{{ $button_icon = strings.TrimSpace (printf "%v" .) }}{{ end }}
       {{ end }}
 
+      {{ $courses := slice }}
+      {{ $courses_raw := index . "courses" }}
+      {{ if reflect.IsSlice $courses_raw }}{{ $courses = $courses_raw }}{{ end }}
+
       {{ if or $degree $institution }}
-        {{ $education = $education | append (dict "degree" $degree "institution" $institution "start" $start "end" $end "summary" $summary "icon" $icon "button" (dict "url" $button_url "text" $button_text "icon" $button_icon)) }}
+        {{ $education = $education | append (dict "degree" $degree "institution" $institution "start" $start "end" $end "summary" $summary "icon" $icon "courses" $courses "button" (dict "url" $button_url "text" $button_text "icon" $button_icon)) }}
       {{ end }}
     {{ end }}
   {{ end }}
