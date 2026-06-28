@@ -44,11 +44,31 @@ education:
     start: September 2025
     end: June 2026
     summary: GPA 3.94 · Annual Dean's List
+    courses:
+      - "BIOEN 536: Quantitative Physiology"
+      - "BIOEN 550: Tissue Optics and Imaging"
+      - "BIOEN 568: Real-Time Biosignal Processing"
+      - "BIOEN 584: Computational Modeling and Simulation of Bioelectricity"
+      - "BIOEN 590: Biomedical Entrepreneurship"
+      - "INFO 340: Client-Side Development"
   - degree: "B.S. Bioengineering:<br>Data Science"
     institution: University of Washington
     start: September 2021
     end: June 2025
     summary: GPA 3.47 · Minor in Applied Mathematics
+    courses:
+      - "BIOEN 217: Introduction to MATLAB Fundamentals"
+      - "BIOEN 316: Signals and Sensors"
+      - "BIOEN 400: Fundamentals of Bioengineering Design"
+      - "BIOEN 420: Medical Imaging"
+      - "BIOEN 560: Neural Engineering"
+      - "BIOEN 466: Neural Computation and Engineering Laboratory"
+      - "BIOEN 461: Neural Engineering Tech Studio"
+      - "CSE 163: Intermediate Data Programming"
+      - "CSE 412: Introduction to Data Visualization"
+      - "CSE 416: Introduction to Machine Learning"
+      - "INFO 201: Foundational Skills for Data Science"
+      - "INFO 330: Databases and Data Modeling"
 experience:
   - role: Jr. Quality Engineer
     org: Bio-Therapeutic

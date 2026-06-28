@@ -343,6 +343,14 @@
           </div>
           {{ end }}
 
+          {{/* Courses */}}
+          {{ $courses_raw := index $item "courses" }}
+          {{ if reflect.IsSlice $courses_raw }}
+          <ul class="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-400 list-disc list-inside">
+            {{ range $courses_raw }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          {{ end }}
+
           {{/* Action button */}}
           {{ $button := index $item "button" }}
           {{ if reflect.IsMap $button }}
