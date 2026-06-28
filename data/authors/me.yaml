@@ -43,7 +43,8 @@ education:
     institution: University of Washington
     start: September 2025
     end: June 2026
-    summary: GPA 3.94 · Annual Dean's List
+    gpa: "3.94"
+    summary: Annual Dean's List
     courses:
       - "BIOEN 536: Quantitative Physiology"
       - "BIOEN 550: Tissue Optics and Imaging"
@@ -55,7 +56,8 @@ education:
     institution: University of Washington
     start: September 2021
     end: June 2025
-    summary: GPA 3.47 · Minor in Applied Mathematics
+    gpa: "3.47"
+    summary: Minor in Applied Mathematics
     courses:
       - "BIOEN 217: Introduction to MATLAB Fundamentals"
       - "BIOEN 316: Signals and Sensors"

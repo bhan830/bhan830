@@ -140,8 +140,11 @@
       {{ $courses_raw := index . "courses" }}
       {{ if reflect.IsSlice $courses_raw }}{{ $courses = $courses_raw }}{{ end }}
 
+      {{ $gpa := "" }}
+      {{ with index . "gpa" }}{{ $gpa = strings.TrimSpace (printf "%v" .) }}{{ end }}
+
       {{ if or $degree $institution }}
-        {{ $education = $education | append (dict "degree" $degree "institution" $institution "start" $start "end" $end "summary" $summary "icon" $icon "courses" $courses "button" (dict "url" $button_url "text" $button_text "icon" $button_icon)) }}
+        {{ $education = $education | append (dict "degree" $degree "institution" $institution "start" $start "end" $end "summary" $summary "icon" $icon "courses" $courses "gpa" $gpa "button" (dict "url" $button_url "text" $button_text "icon" $button_icon)) }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -311,35 +314,40 @@
             </div>
             
             {{/* Date badge */}}
-            <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <time>
-                {{ $start := index $item "start" }}
-                {{ $end := index $item "end" }}
-                {{ if $start }}
-                  {{ $parsed := try (time $start) }}
-                  {{ if not $parsed.Err }}
-                    {{ $parsed.Value | time.Format $date_format }} –
-                  {{ else }}
-                    {{ $start }} –
+            <div class="flex flex-col items-end gap-2 shrink-0">
+              {{ with index $item "gpa" }}
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-secondary-100 dark:bg-secondary-500/10 text-secondary-700 dark:text-secondary-300 border border-secondary-200 dark:border-secondary-500/20">GPA: {{ . }}</span>
+              {{ end }}
+              <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <time>
+                  {{ $start := index $item "start" }}
+                  {{ $end := index $item "end" }}
+                  {{ if $start }}
+                    {{ $parsed := try (time $start) }}
+                    {{ if not $parsed.Err }}
+                      {{ $parsed.Value | time.Format $date_format }} –
+                    {{ else }}
+                      {{ $start }} –
+                    {{ end }}
                   {{ end }}
-                {{ end }}
-                {{ if $end }}
-                  {{ $parsed := try (time $end) }}
-                  {{ if not $parsed.Err }}
-                    {{ $parsed.Value | time.Format $date_format }}
+                  {{ if $end }}
+                    {{ $parsed := try (time $end) }}
+                    {{ if not $parsed.Err }}
+                      {{ $parsed.Value | time.Format $date_format }}
+                    {{ else }}
+                      {{ $end }}
+                    {{ end }}
                   {{ else }}
-                    {{ $end }}
-                  {{ end }}
-                {{ else }}
-                  <span class="text-primary-600 dark:text-primary-400 font-medium">{{ i18n "present" | default "Present" }}</span>
-                {{end}}
-              </time>
+                    <span class="text-primary-600 dark:text-primary-400 font-medium">{{ i18n "present" | default "Present" }}</span>
+                  {{end}}
+                </time>
+              </div>
             </div>
           </div>
-          
+
           {{/* Description */}}
           {{ with index $item "summary" }}
           <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-relaxed">
