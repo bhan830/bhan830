@@ -65,6 +65,10 @@
         {{ end }}
       </h1>
 
+      {{ with .Params.subtitle }}
+      <p class="mt-2 text-xl text-gray-500 dark:text-gray-400">{{ . }}</p>
+      {{ end }}
+
       {{/* Project metadata bar: institution, affiliation, duration — replaces the date/read-time row */}}
       {{ if or .Params.institution .Params.affiliation .Params.start_date }}
       <div class="mt-5 mb-16 flex flex-col gap-3 text-xl text-gray-600 dark:text-gray-300">

@@ -1,5 +1,6 @@
 ---
 title: WiseFind
+subtitle: Medical AI Platform for Neurotrauma Assessment
 summary: Retrieval-Augmented Generation (RAG) platform for neurotrauma clinical intelligence. 
 featured_image: ''
 tags:
@@ -11,8 +12,8 @@ tags:
   - Prompt Engineering
   - Synthetic Data Generation
 date: 2025-09-01
-institution: University of Washington
-affiliation: UW Department of Neurosurgery, Harborview Medical Center
+institution: University of Washington | Seattle, WA
+affiliation: UW Department of Neurosurgery, UW Harborview Medical Center
 start_date: 2025-09-01
 end_date: ''
 ---
