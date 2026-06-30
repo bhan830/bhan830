@@ -121,4 +121,9 @@ section.hbb-section,
     gap: 3.5rem !important;
     margin-top: 1.25rem !important;
   }
+
+  /* Project cards: match the combined width of the skills grid (75vw) */
+  #projects .container.max-w-screen-lg {
+    max-width: 75vw !important;
+  }
 }
