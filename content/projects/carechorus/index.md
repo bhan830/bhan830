@@ -9,7 +9,7 @@ tags:
   - Mobile
   - Healthcare AI
 date: 2025-03-01
-institution: University of Washington
+institution: University of Washington | Seattle, WA
 start_date: 2025-03-01
 end_date: ''
 ---

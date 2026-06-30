@@ -9,8 +9,8 @@ tags:
   - Medical Imaging
   - AWS
 date: 2025-11-01
-institution: University of Washington
-affiliation: Amazon Web Services (AWS)
+institution: University of Washington | Seattle, WA
+affiliation: Amazon Web Services (AWS), UW Harborview Medical Center
 start_date: 2025-11-01
 end_date: ''
 ---
