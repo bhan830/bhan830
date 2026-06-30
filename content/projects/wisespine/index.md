@@ -1,7 +1,7 @@
 ---
 title: WiseSpine
 subtitle: Deep Learning Pipeline for Automated Cobb Angle Measurement
-summary: A data-centric AI study showing that ground-truth engineering choices drive large accuracy gains in automated scoliosis assessment.
+summary: "Data preparation outperforms architecture selection in automated scoliosis assessment."
 featured_image: ''
 tags:
   - Python
