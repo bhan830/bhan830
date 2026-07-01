@@ -87,9 +87,10 @@ section.hbb-section,
    calc(-50vw + 50%) breaks out of any centered container regardless of max-width.
    align-self: flex-start anchors the item to the container's left edge so the
    calc lands correctly even when the parent uses items-center. */
-#experience h2 {
+#experience h2,
+#skills h2 {
   background-color: var(--color-primary-500);
-  color: white;
+  color: white !important;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   box-sizing: border-box;
