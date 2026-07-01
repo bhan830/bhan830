@@ -63,7 +63,7 @@ sections:
             - name: Git
             - name: Linux
     design:
-      style: list
+      style: grid
 
   - block: collection
     id: projects
