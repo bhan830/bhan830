@@ -40,7 +40,7 @@ sections:
             - name: Python
               icon: brands/python
             - name: MATLAB
-              icon: hero/code-bracket
+              icon: custom/matlab
             - name: R
               icon: brands/r
             - name: SQL
@@ -52,7 +52,7 @@ sections:
             - name: PyTorch
               icon: brands/pytorch
             - name: RAG Pipelines
-              icon: brands/langchain
+              icon: hero/magnifying-glass
             - name: LLM Evaluation
               icon: brands/huggingface
             - name: Prompt Engineering
@@ -74,7 +74,7 @@ sections:
             - name: Tableau
               icon: brands/tableau
             - name: Medical Imaging
-              icon: hero/beaker
+              icon: custom/xray
         - name: Cloud & Infrastructure
           items:
             - name: AWS
