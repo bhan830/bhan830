@@ -94,7 +94,7 @@ sections:
             - name: LabVIEW
               icon: custom/labview
             - name: COMSOL Multiphysics
-              icon: hero/beaker
+              icon: hero/cube-transparent
             - name: Onshape
               icon: hero/cube
             - name: SolidWorks
