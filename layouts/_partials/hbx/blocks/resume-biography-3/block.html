@@ -337,11 +337,40 @@
           {{ end }}
         </div>
         {{ end }}
+
+        {{/* CV Download Button — left column */}}
+        {{ $button_raw := index $content "button" }}
+        {{ if and $button_raw (reflect.IsMap $button_raw) }}
+          {{ $button_text := "" }}
+          {{ $button_url := "" }}
+          {{ with index $button_raw "text" }}{{ $button_text = printf "%v" . }}{{ end }}
+          {{ with index $button_raw "url" }}{{ $button_url = printf "%v" . }}{{ end }}
+          {{ $button_text = strings.TrimSpace $button_text }}
+          {{ $button_url = strings.TrimSpace $button_url }}
+          {{ if and $button_text $button_url }}
+            {{ $button_link := $button_url }}
+            {{ $scheme := (urls.Parse $button_link).Scheme }}
+            {{ $target := "" }}
+            {{ if not $scheme }}
+              {{ if not (hasPrefix $button_link "#") }}
+                {{ $button_link = $button_link | relLangURL }}
+              {{ end }}
+              {{ if eq (path.Ext $button_link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
+            {{ else if in (slice "http" "https") $scheme }}
+              {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+            {{ end }}
+            <a href="{{ $button_link | safeURL }}" {{ $target | safeHTMLAttr }}
+               class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+              {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-5 h-5 mr-2'") }}
+              {{ $button_text }}
+            </a>
+          {{ end }}
+        {{ end }}
       </div>
 
       {{/* Right Column: Flexible span */}}
       <div class="md:col-span-8">
-        
+
         {{/* Bio Section */}}
         {{ $bio_content := "" }}
         {{ $bio_override_raw := index $content "text" }}
@@ -373,113 +402,6 @@
             <div class="bio-text" {{ if $bio_style }}{{ (printf "style=\"%s\"" $bio_style) | safeHTMLAttr }}{{ end }}>
               {{ . }}
             </div>
-          </div>
-        </div>
-        {{ end }}
-
-        {{/* CV Download Button */}}
-        {{ $button_raw := index $content "button" }}
-        {{ if and $button_raw (reflect.IsMap $button_raw) }}
-          {{ $button_text := "" }}
-          {{ $button_url := "" }}
-          {{ with index $button_raw "text" }}{{ $button_text = printf "%v" . }}{{ end }}
-          {{ with index $button_raw "url" }}{{ $button_url = printf "%v" . }}{{ end }}
-          {{ $button_text = strings.TrimSpace $button_text }}
-          {{ $button_url = strings.TrimSpace $button_url }}
-          {{ if and $button_text $button_url }}
-            {{ $button_link := $button_url }}
-            {{ $scheme := (urls.Parse $button_link).Scheme }}
-            {{ $target := "" }}
-            {{ if not $scheme }}
-              {{ if not (hasPrefix $button_link "#") }}
-                {{ $button_link = $button_link | relLangURL }}
-              {{ end }}
-              {{ if eq (path.Ext $button_link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
-            {{ else if in (slice "http" "https") $scheme }}
-              {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
-            {{ end }}
-            <div class="mb-16">
-              <a href="{{ $button_link | safeURL }}" {{ $target | safeHTMLAttr }}
-                 class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-5 h-5 mr-3'") }}
-                {{ $button_text }}
-              </a>
-            </div>
-          {{ end }}
-        {{ end }}
-
-        {{/* Education Section */}}
-        {{ $education_raw := $profile.education }}
-        {{ $education := slice }}
-        {{ if reflect.IsSlice $education_raw }}
-          {{ $education = $education_raw }}
-        {{ end }}
-        {{ if gt (len $education) 0 }}
-        <div class="mb-16">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-              {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-            </div>
-            {{ $education_heading := i18n "education" }}
-            {{ $education_heading_raw := index $headings "education" }}
-            {{ if eq (printf "%T" $education_heading_raw) "string" }}
-              {{ $education_heading_raw = strings.TrimSpace $education_heading_raw }}
-              {{ if ne $education_heading_raw "" }}
-                {{ $education_heading = $education_heading_raw }}
-              {{ end }}
-            {{ end }}
-            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $education_heading | markdownify }}</h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {{ range $education }}
-            {{ if reflect.IsMap . }}
-            {{ $degree := "" }}
-            {{ $degreeRaw := index . "degree" | default (index . "area") }}
-            {{ if ne $degreeRaw nil }}{{ $degree = printf "%v" $degreeRaw }}{{ end }}
-            {{ $year := "" }}
-            {{ with index . "year" }}{{ $year = printf "%v" . }}{{ end }}
-            {{ $start := "" }}
-            {{ with index . "start" }}{{ $start = printf "%v" . }}{{ end }}
-            {{ $end := "" }}
-            {{ with index . "end" }}{{ $end = printf "%v" . }}{{ end }}
-            {{ $institution := "" }}
-            {{ with index . "institution" }}{{ $institution = printf "%v" . }}{{ end }}
-            {{ $icon := "" }}
-            {{ $iconRaw := index . "icon" }}
-            {{ if eq (printf "%T" $iconRaw) "string" }}
-              {{ $icon = $iconRaw }}
-            {{ end }}
-            <div class="group h-full flex flex-col bg-gradient-to-br from-white/90 to-primary-50/30 dark:from-gray-800/90 dark:to-primary-900/20 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary-200 dark:hover:border-primary-800 backdrop-blur-md">
-              <div class="flex gap-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 rounded-full flex items-center justify-center shadow-md">
-                  {{ if $icon }}
-                    {{ partial "functions/get_icon" (dict "name" $icon "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-                  {{ else }}
-                    {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-                  {{ end }}
-                </div>
-                <div class="flex-1 flex-grow">
-                  {{ if $degree }}
-                  <p class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                    {{ $degree }}
-                  </p>
-                  {{ end }}
-                  {{ if $year }}
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">{{ $year }}</p>
-                  {{ else if $start }}
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
-                      {{ $start }}
-                      {{ if $end }}<br>{{ $end }}{{ end }}
-                    </p>
-                  {{ end }}
-                  {{ if $institution }}
-                    <p class="text-gray-700 dark:text-gray-300 text-base">{{ $institution }}</p>
-                  {{ end }}
-                </div>
-              </div>
-            </div>
-            {{ end }}
-            {{ end }}
           </div>
         </div>
         {{ end }}
