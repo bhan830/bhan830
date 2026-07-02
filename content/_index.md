@@ -33,9 +33,9 @@ sections:
   - block: tech-stack
     id: skills
     content:
-      title: Skills and Qualifications
+      title: Skills and Expertise
       categories:
-        - name: Programming
+        - name: Programming Languages
           items:
             - name: Python
               icon: brands/python
@@ -63,7 +63,7 @@ sections:
               icon: hero/cpu-chip
             - name: TensorFlow
               icon: brands/tensorflow
-        - name: Data & Medical Imaging
+        - name: Data Science & Health Informatics
           items:
             - name: OpenCV
               icon: brands/opencv
