@@ -52,9 +52,9 @@ sections:
             - name: PyTorch
               icon: brands/pytorch
             - name: RAG Pipelines
-              icon: hero/magnifying-glass
+              icon: custom/rag-pipelines
             - name: LLM Evaluation
-              icon: brands/huggingface
+              icon: custom/llm-evaluation
             - name: Prompt Engineering
               icon: brands/openai
             - name: Synthetic Data Generation
