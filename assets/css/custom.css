@@ -94,6 +94,12 @@ section.hbb-section,
   font-size: 1.25rem !important;
 }
 
+/* SVG presentational attributes are overridden by any CSS rule.
+   Force overflow visible so custom icon paths aren't clipped at the element boundary. */
+#skills svg {
+  overflow: visible !important;
+}
+
 /* Full-width colored title bar, tracks active theme.
    calc(-50vw + 50%) breaks out of any centered container regardless of max-width.
    align-self: flex-start anchors the item to the container's left edge so the
