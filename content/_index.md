@@ -38,30 +38,51 @@ sections:
         - name: Programming
           items:
             - name: Python
+              icon: brands/python
             - name: MATLAB
+              icon: hero/code-bracket
             - name: R
+              icon: brands/r
             - name: SQL
+              icon: hero/circle-stack
             - name: JavaScript
+              icon: brands/javascript
         - name: AI & Machine Learning
           items:
             - name: PyTorch
+              icon: brands/pytorch
             - name: RAG Pipelines
+              icon: brands/langchain
             - name: LLM Evaluation
+              icon: brands/huggingface
             - name: Prompt Engineering
+              icon: brands/openai
             - name: Synthetic Data Generation
+              icon: hero/cpu-chip
             - name: TensorFlow
+              icon: brands/tensorflow
         - name: Data & Medical Imaging
           items:
             - name: OpenCV
-            - name: NumPy / pandas
+              icon: brands/opencv
+            - name: NumPy
+              icon: brands/numpy
+            - name: pandas
+              icon: brands/pandas
             - name: scikit-learn
+              icon: brands/scikitlearn
             - name: Tableau
+              icon: brands/tableau
             - name: Medical Imaging
+              icon: hero/beaker
         - name: Cloud & Infrastructure
           items:
             - name: AWS
+              icon: brands/amazonwebservices
             - name: Git
+              icon: brands/git
             - name: Linux
+              icon: brands/linux
     design:
       style: grid
 
