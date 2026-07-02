@@ -20,11 +20,13 @@ bio: |
 links:
   - icon: at-symbol
     url: mailto:benjaminhan830@gmail.com
-    label: E-mail Me
+    label: benjaminhan830@gmail.com
   - icon: brands/github
     url: https://github.com/bhan830
+    label: https://github.com/bhan830
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/benjaminhan830/
+    label: https://www.linkedin.com/in/benjaminhan830/
 interests:
   - Machine Learning
   - Artificial Intelligence
